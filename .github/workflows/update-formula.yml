@@ -76,8 +76,8 @@ jobs:
             desc "Run coding agents in isolated containers"
             homepage "https://github.com/JeremyOrr4/caged"
             url "https://github.com/JeremyOrr4/caged/archive/refs/tags/$tag.tar.gz"
-            sha256 "$sha"
             version "$version"
+            sha256 "$sha"
             license "MIT"
 
             depends_on "go" => :build

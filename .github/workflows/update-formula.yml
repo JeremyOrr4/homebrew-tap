@@ -47,7 +47,7 @@ jobs:
           version="${tag#v}"
           current=""
           if [ -f Formula/caged.rb ]; then
-            current="$(sed -n 's/^  version "\([^"]*\)"$/\1/p' Formula/caged.rb)"
+            current="$(sed -n 's|^  url "https://github.com/JeremyOrr4/caged/archive/refs/tags/v\([0-9][0-9.]*\)\.tar.gz"$|\1|p' Formula/caged.rb)"
           fi
           if [ -n "$current" ]; then
             update="$(python3 - "$current" "$version" <<'PY'
@@ -76,7 +76,6 @@ jobs:
             desc "Run coding agents in isolated containers"
             homepage "https://github.com/JeremyOrr4/caged"
             url "https://github.com/JeremyOrr4/caged/archive/refs/tags/$tag.tar.gz"
-            version "$version"
             sha256 "$sha"
             license "MIT"
 

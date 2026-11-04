@@ -101,6 +101,7 @@ jobs:
           tap_dir="$(brew --repository jeremyorr4/tap)"
           mkdir -p "$tap_dir/Formula"
           cp Formula/caged.rb "$tap_dir/Formula/caged.rb"
+          brew trust --formula jeremyorr4/tap/caged
           brew style --formula caged
           if git log --all --oneline -- Formula/caged.rb | grep -q .; then
             brew audit --strict --online jeremyorr4/tap/caged

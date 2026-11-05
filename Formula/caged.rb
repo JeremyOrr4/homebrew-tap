@@ -1,8 +1,8 @@
 class Caged < Formula
   desc "Run coding agents in isolated containers"
   homepage "https://github.com/JeremyOrr4/caged"
-  url "https://github.com/JeremyOrr4/caged/archive/refs/tags/v0.1.3.tar.gz"
-  sha256 "eec1148f3c2114fb655b578e252e15efeb9c461fb8296b330e127729bf2bf310"
+  url "https://github.com/JeremyOrr4/caged/archive/refs/tags/v0.1.4.tar.gz"
+  sha256 "21a4bb2324a24eb4b913ba4bf28dba1ebd5d65c5a38ee5eab70926f5b965121b"
   license "MIT"
 
   depends_on "go" => :build
